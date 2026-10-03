@@ -1,0 +1,2431 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #050505;
+    color: #ffffff;
+}
+
+/* HERO */
+
+.hero {
+    background: #d4af37;
+    border-bottom: 3px solid #000000;
+    padding: 70px 20px;
+}
+
+.hero-content {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.eyebrow {
+    margin: 0 0 15px 0;
+    color: #000000;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 56px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.hero h1 span {
+    color: #000000;
+}
+
+.season {
+    margin-top: 20px;
+    color: #181818;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* HERO BUTTONS */
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.hero-buttons a {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #d4af37;
+    color: #050505;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.hero-buttons a:hover {
+    background: #ffffff;
+}
+
+/* NAVIGATION */
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 18px 20px;
+    background: #000000;
+    border-bottom: 1px solid #292929;
+}
+
+nav a {
+    color: #d6d6d6;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+/* MAIN */
+
+main {
+    width: min(1100px, 92%);
+    margin: 40px auto 80px;
+}
+
+h2 {
+    margin-top: 45px;
+    margin-bottom: 20px;
+    color: #d4af37;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* MATCHUPS */
+
+#matchups {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+#matchups > div {
+    background: linear-gradient(135deg, #151515, #0a0a0a);
+    border: 1px solid #303030;
+    border-left: 5px solid #d4af37;
+    border-radius: 8px;
+    padding: 24px 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    transition: 0.2s ease;
+}
+
+#matchups > div:hover {
+    border-color: #d4af37;
+    transform: translateY(-2px);
+}
+
+#matchups h3 {
+    margin: 0 0 24px 0;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #303030;
+    color: #a8a8a8;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.matchup-teams {
+    display: grid;
+    grid-template-columns: 1fr 80px 1fr;
+    align-items: center;
+    gap: 20px;
+}
+
+.matchup-team {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.matchup-team-left {
+    text-align: left;
+}
+
+.matchup-team-right {
+    text-align: right;
+}
+
+.matchup-team strong {
+    color: #ffffff;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.matchup-team small {
+    color: #999999;
+    font-size: 13px;
+}
+
+.actual-score {
+    margin-top: 8px;
+    color: #ffffff;
+    font-size: 34px;
+    font-weight: 800;
+}
+
+.projected-score {
+    color: #777777;
+    font-size: 12px;
+}
+
+.matchup-vs {
+    color: #d4af37;
+    font-size: 13px;
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+/* STANDINGS */
+
+#standings {
+    display: grid;
+    gap: 2px;
+    background: #292929;
+    border: 1px solid #292929;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#standings > div {
+    display: grid;
+    grid-template-columns: 55px 1.5fr 1fr 90px 100px 100px;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 20px;
+    background: #111111;
+}
+
+#standings > div:hover {
+    background: #181818;
+}
+
+#standings p {
+    margin: 0;
+}
+
+.standings-header {
+    background: #d4af37 !important;
+    color: #050505;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.standings-rank {
+    color: #d4af37;
+    font-weight: bold;
+}
+
+.standings-team {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.standings-manager {
+    color: #999999;
+}
+
+.standings-record {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.standings-points {
+    color: #ffffff;
+}
+
+.standings-points-against {
+    color: #999999;
+}
+
+/* PLAYOFFS */
+
+#playoff-probabilities {
+    display: grid;
+    gap: 10px;
+}
+
+#playoff-probabilities > div {
+    padding: 15px 20px;
+    background: #111111;
+    border: 1px solid #292929;
+    border-radius: 5px;
+}
+
+#playoff-probabilities p {
+    margin: 5px 0;
+}
+
+/* LEAGUE LEADERS */
+
+#league-leaders {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.leader-card {
+    background: linear-gradient(135deg, #151515, #0a0a0a);
+    border: 1px solid #303030;
+    border-top: 3px solid #d4af37;
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.leader-card h3 {
+    margin: 0 0 10px 0;
+    color: #999999;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.leader-card p {
+    margin: 0;
+    color: white;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    main {
+        width: 94%;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons a {
+        text-align: center;
+    }
+
+    .matchup-teams {
+        grid-template-columns: 1fr 45px 1fr;
+        gap: 8px;
+    }
+
+    .matchup-team strong {
+        font-size: 15px;
+    }
+
+    .matchup-team small {
+        font-size: 11px;
+    }
+
+    .actual-score {
+        font-size: 25px;
+    }
+
+    .projected-score {
+        font-size: 10px;
+    }
+
+    #league-leaders {
+        grid-template-columns: 1fr;
+    }
+
+    #standings > div {
+        grid-template-columns: 35px 1fr 55px;
+    }
+
+    .standings-manager,
+    .standings-points,
+    .standings-points-against {
+        display: none;
+    }
+
+}
+
+.playoff-section-title {
+    margin: 35px 0 15px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #d4af37;
+    color: #d4af37;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+}
+
+.playoff-team {
+    display: grid;
+    grid-template-columns: 65px 1fr;
+    align-items: center;
+    gap: 15px;
+    padding: 18px 20px;
+    margin-bottom: 5px;
+    background: #111111;
+    border: 1px solid #292929;
+    border-left: 4px solid #d4af37;
+}
+
+.playoff-team:hover {
+    background: #181818;
+    border-color: #d4af37;
+}
+
+.playoff-seed {
+    margin: 0;
+    color: #d4af37;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.playoff-team-name {
+    margin: 0;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.playoff-record {
+    margin: 4px 0 0 0;
+    color: #888888;
+    font-size: 12px;
+}
+
+.playoff-odds-row {
+    display: grid;
+    grid-template-columns: 55px 1fr 100px;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    margin-bottom: 3px;
+    background: #111111;
+    border: 1px solid #242424;
+}
+
+.playoff-odds-row:hover {
+    background: #181818;
+    border-color: #d4af37;
+}
+
+.playoff-rank {
+    margin: 0;
+    color: #777777;
+    font-weight: bold;
+}
+
+.playoff-odds-team {
+    margin: 0;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.playoff-percentage {
+    margin: 0;
+    color: #d4af37;
+    font-size: 18px;
+    font-weight: 800;
+    text-align: right;
+}
+
+/* ================================
+   HOMEPAGE
+================================ */
+
+.home-section {
+    margin-top: 45px;
+}
+
+.weekly-update {
+    background: linear-gradient(135deg, #151515, #0a0a0a);
+    border: 1px solid #303030;
+    border-left: 5px solid #d4af37;
+    border-radius: 8px;
+    padding: 28px 30px;
+}
+
+.update-label,
+.feature-label {
+    margin: 0 0 10px 0;
+    color: #d4af37;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.weekly-update h3,
+.home-feature-card h3,
+.news-card h3 {
+    margin: 0 0 10px 0;
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.weekly-update p:last-child,
+.home-feature-card p:last-child,
+.news-card p {
+    color: #999999;
+    line-height: 1.6;
+}
+
+
+/* WHO'S COOKING / FRAUD WATCH */
+
+.home-feature-card {
+    background: linear-gradient(135deg, #151515, #0a0a0a);
+    border: 1px solid #303030;
+    border-radius: 8px;
+    padding: 28px 30px;
+}
+
+.cooking-card {
+    border-left: 5px solid #d4af37;
+}
+
+.fraud-card {
+    border-left: 5px solid #8b0000;
+}
+
+.fraud-card .feature-label {
+    color: #ff4d4d;
+}
+
+.feature-manager {
+    margin: 0 0 15px 0;
+    color: #777777;
+    font-size: 13px;
+}
+
+
+/* THIS WEEK */
+
+.home-news-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.news-card {
+    background: linear-gradient(135deg, #151515, #0a0a0a);
+    border: 1px solid #303030;
+    border-top: 3px solid #d4af37;
+    border-radius: 8px;
+    padding: 24px;
+    transition: 0.2s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-3px);
+    border-color: #d4af37;
+}
+
+.news-card a {
+    display: inline-block;
+    margin-top: 12px;
+    color: #d4af37;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.news-card a:hover {
+    color: #ffffff;
+}
+
+
+/* LEAGUE RUMORS */
+
+.rumor-box {
+    background: #111111;
+    border: 1px solid #292929;
+    border-radius: 8px;
+    padding: 25px 30px;
+}
+
+.rumor-box p:last-child {
+    margin: 0;
+    color: #999999;
+    line-height: 1.7;
+}
+
+
+/* HOMEPAGE MOBILE */
+
+@media (max-width: 700px) {
+
+    .home-news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .weekly-update,
+    .home-feature-card,
+    .rumor-box {
+        padding: 22px;
+    }
+
+}
+
+/* FEATURE STORY LAYOUT */
+
+.feature-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.feature-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    border: 1px solid #d4af37;
+    border-radius: 50%;
+    background: #0a0a0a;
+    font-size: 28px;
+    flex-shrink: 0;
+}
+
+.fraud-badge {
+    border-color: #8b0000;
+}
+
+.feature-divider {
+    height: 1px;
+    margin: 20px 0;
+    background: #303030;
+}
+
+.feature-story {
+    margin: 0;
+    color: #c5c5c5;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.feature-signoff {
+    margin: 20px 0 0 0;
+    color: #666666;
+    font-size: 11px;
+    font-style: italic;
+}
+
+/* LEAGUE RUMORS */
+
+.rumor-box h3 {
+    margin: 0 0 25px 0;
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.rumor-item {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 18px;
+    padding: 20px 0;
+    border-top: 1px solid #292929;
+}
+
+.rumor-number {
+    color: #d4af37;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.rumor-item h4 {
+    margin: 0 0 7px 0;
+    color: #d4af37;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.rumor-item p {
+    margin: 0;
+    color: #999999;
+    line-height: 1.6;
+}
+
+/* ================================
+   AROUND THE LEAGUE NEWS
+================================ */
+
+.league-news {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.news-story {
+    background: linear-gradient(135deg, #151515, #0a0a0a);
+    border: 1px solid #303030;
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.featured-news {
+    border-left: 5px solid #d4af37;
+    padding: 30px;
+}
+
+.news-story-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.news-category {
+    color: #d4af37;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.news-week {
+    color: #666666;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.news-story h3 {
+    margin: 8px 0 12px 0;
+    color: #ffffff;
+    font-size: 22px;
+    line-height: 1.25;
+}
+
+.featured-news h3 {
+    font-size: 30px;
+}
+
+.news-story p {
+    margin: 0;
+    color: #999999;
+    line-height: 1.7;
+}
+
+.news-author {
+    margin-top: 20px !important;
+    color: #666666 !important;
+    font-size: 11px;
+    font-style: italic;
+}
+
+.news-story-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.news-story-grid .news-story {
+    transition: 0.2s ease;
+}
+
+.news-story-grid .news-story:hover {
+    transform: translateY(-3px);
+    border-color: #d4af37;
+}
+
+@media (max-width: 700px) {
+
+    .news-story-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-news {
+        padding: 24px;
+    }
+
+    .featured-news h3 {
+        font-size: 24px;
+    }
+
+}
+
+/* ================================
+   FOOTER
+================================ */
+
+.site-footer {
+    margin-top: 80px;
+    background: #000000;
+    border-top: 1px solid #292929;
+}
+
+.footer-content {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+    padding: 45px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.footer-brand h3 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 22px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.footer-brand h3 span {
+    color: #d4af37;
+}
+
+.footer-brand p {
+    margin: 12px 0 0 0;
+    color: #666666;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 22px;
+}
+
+.footer-links a {
+    color: #888888;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.footer-links a:hover {
+    color: #d4af37;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: min(1100px, 92%);
+    margin: 0 auto;
+    padding: 18px 0;
+    border-top: 1px solid #1c1c1c;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #4f4f4f;
+    font-size: 10px;
+}
+
+@media (max-width: 700px) {
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-links {
+        justify-content: flex-start;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+
+}
+
+/* ================================
+   LEAGUE CHAMPIONS
+================================ */
+
+.champions-bar {
+    display: grid;
+    grid-template-columns: 1.4fr repeat(4, 1fr);
+    background: #0a0a0a;
+    border-bottom: 1px solid #292929;
+}
+
+.champions-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 25px;
+    background: #111111;
+    border-right: 1px solid #292929;
+}
+
+.champions-title span {
+    font-size: 20px;
+}
+
+.champions-title p {
+    margin: 0;
+    color: #d4af37;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.champion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px 18px;
+    border-right: 1px solid #292929;
+    transition: 0.2s ease;
+}
+
+.champion:hover {
+    background: #151515;
+}
+
+.champion-year {
+    margin-bottom: 5px;
+    color: #666666;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.champion-name {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+@media (max-width: 900px) {
+
+    .champions-bar {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .champions-title {
+        grid-column: 1 / -1;
+        border-right: none;
+        border-bottom: 1px solid #292929;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .champions-bar {
+        grid-template-columns: 1fr;
+    }
+
+    .champion {
+        border-right: none;
+        border-bottom: 1px solid #292929;
+    }
+
+}
+
+/* ================================
+   MATCHUP PAGE
+================================ */
+
+#matchups {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 30px;
+}
+
+/* MATCHUP CARD */
+
+#matchups > div {
+    position: relative;
+    background: linear-gradient(135deg, #161616, #090909);
+    border: 1px solid #303030;
+    border-left: 5px solid #d4af37;
+    border-radius: 10px;
+    padding: 28px 32px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+    transition: 0.2s ease;
+}
+
+#matchups > div:hover {
+    transform: translateY(-3px);
+    border-color: #d4af37;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* WEEK LABEL */
+
+#matchups h3 {
+    margin: 0 0 24px 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #303030;
+
+    color: #777777;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* TEAM LAYOUT */
+
+.matchup-teams {
+    display: grid;
+    grid-template-columns: 1fr 90px 1fr;
+    align-items: center;
+    gap: 25px;
+}
+
+/* TEAM */
+
+.matchup-team {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.matchup-team-left {
+    text-align: left;
+}
+
+.matchup-team-right {
+    text-align: right;
+}
+
+.matchup-team strong {
+    color: #ffffff;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.matchup-team small {
+    color: #777777;
+    font-size: 12px;
+}
+
+/* SCORES */
+
+.actual-score {
+    margin-top: 10px;
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.projected-score {
+    margin-top: 5px;
+    color: #666666;
+    font-size: 11px;
+}
+
+/* VS */
+
+.matchup-vs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 60px;
+    height: 60px;
+
+    margin: 0 auto;
+
+    border: 1px solid #3a3a3a;
+    border-radius: 50%;
+
+    background: #0a0a0a;
+
+    color: #d4af37;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    #matchups > div {
+        padding: 22px 18px;
+    }
+
+    .matchup-teams {
+        grid-template-columns: 1fr 55px 1fr;
+        gap: 10px;
+    }
+
+    .matchup-team strong {
+        font-size: 16px;
+    }
+
+    .matchup-team small {
+        font-size: 10px;
+    }
+
+    .actual-score {
+        font-size: 27px;
+    }
+
+    .projected-score {
+        font-size: 9px;
+    }
+
+    .matchup-vs {
+        width: 48px;
+        height: 48px;
+        font-size: 10px;
+    }
+
+}
+
+/* ================================
+   STANDINGS PAGE
+================================ */
+
+#standings {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    background: #292929;
+    border: 1px solid #292929;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+}
+
+/* STANDINGS ROW */
+
+#standings > div {
+    display: grid;
+    grid-template-columns: 55px 1.5fr 1fr 90px 100px 100px;
+    align-items: center;
+    gap: 12px;
+
+    min-height: 65px;
+    padding: 15px 20px;
+
+    background: #111111;
+
+    transition: 0.2s ease;
+}
+
+#standings > div:hover {
+    background: #181818;
+}
+
+/* HEADER */
+
+#standings .standings-header {
+    min-height: 48px;
+    background: #d4af37 !important;
+    color: #050505;
+}
+
+#standings .standings-header p {
+    color: #050505;
+}
+
+/* RANK */
+
+.standings-rank {
+    color: #d4af37;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+/* TEAM */
+
+.standings-team {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+/* MANAGER */
+
+.standings-manager {
+    color: #888888;
+    font-size: 13px;
+}
+
+/* RECORD */
+
+.standings-record {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+/* POINTS */
+
+.standings-points {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* POINTS AGAINST */
+
+.standings-points-against {
+    color: #777777;
+    font-size: 14px;
+}
+
+/* PLAYOFF SPOTS */
+
+#standings > div:nth-child(n+2):nth-child(-n+8) {
+    border-left: 4px solid #d4af37;
+}
+
+/* BOTTOM PLAYOFF SPOT */
+
+#standings > div:nth-child(8) {
+    box-shadow: inset 0 -1px 0 #d4af37;
+}
+
+/* NON-PLAYOFF TEAMS */
+
+#standings > div:nth-child(n+9) {
+    border-left: 4px solid #292929;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    #standings {
+        overflow-x: auto;
+    }
+
+    #standings > div {
+        grid-template-columns: 40px 1fr 65px;
+        gap: 10px;
+        padding: 14px 15px;
+        min-width: 0;
+    }
+
+    #standings .standings-manager,
+    #standings .standings-points,
+    #standings .standings-points-against {
+        display: none;
+    }
+
+    .standings-team {
+        font-size: 14px;
+    }
+
+    .standings-record {
+        text-align: right;
+    }
+
+}
+
+/* ================================
+   PLAYOFF PAGE
+================================ */
+
+/* PLAYOFF ODDS */
+
+#playoff-probabilities {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: #292929;
+    border: 1px solid #292929;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+}
+
+.playoff-odds-row {
+    display: grid;
+    grid-template-columns: 60px 1fr 120px;
+    align-items: center;
+    gap: 15px;
+
+    min-height: 60px;
+    padding: 14px 20px;
+
+    background: #111111;
+
+    transition: 0.2s ease;
+}
+
+.playoff-odds-row:hover {
+    background: #181818;
+    border-color: #d4af37;
+}
+
+.playoff-rank {
+    margin: 0;
+    color: #777777;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.playoff-odds-team {
+    margin: 0;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.playoff-percentage {
+    margin: 0;
+    color: #d4af37;
+    font-size: 20px;
+    font-weight: 900;
+    text-align: right;
+}
+
+/* PLAYOFF FIELD */
+
+.playoff-section-title {
+    margin: 35px 0 15px 0;
+    padding-bottom: 10px;
+
+    border-bottom: 2px solid #d4af37;
+
+    color: #d4af37;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.playoff-team {
+    display: grid;
+    grid-template-columns: 65px 1fr;
+    align-items: center;
+    gap: 15px;
+
+    padding: 18px 20px;
+    margin-bottom: 5px;
+
+    background: #111111;
+    border: 1px solid #292929;
+    border-left: 4px solid #d4af37;
+
+    transition: 0.2s ease;
+}
+
+.playoff-team:hover {
+    background: #181818;
+    border-color: #d4af37;
+}
+
+.playoff-seed {
+    margin: 0;
+    color: #d4af37;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.playoff-team-name {
+    margin: 0;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.playoff-record {
+    margin: 4px 0 0 0;
+    color: #777777;
+    font-size: 12px;
+}
+
+/* BRACKET */
+
+#playoff-bracket {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* BRACKET CARDS */
+
+#playoff-bracket > div {
+    background: linear-gradient(135deg, #151515, #090909);
+    border: 1px solid #303030;
+    border-left: 5px solid #d4af37;
+    border-radius: 8px;
+    padding: 22px 25px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+#playoff-bracket > div h3 {
+    margin: 0 0 15px 0;
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid #292929;
+
+    color: #d4af37;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* BRACKET TEAM ROWS */
+
+#playoff-bracket > div p {
+    margin: 8px 0;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+/* BRACKET WINNER / HIGHLIGHT */
+
+#playoff-bracket strong {
+    color: #d4af37;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .playoff-odds-row {
+        grid-template-columns: 45px 1fr 80px;
+        gap: 10px;
+        padding: 14px 15px;
+    }
+
+    .playoff-odds-team {
+        font-size: 13px;
+    }
+
+    .playoff-percentage {
+        font-size: 17px;
+    }
+
+    .playoff-team {
+        grid-template-columns: 50px 1fr;
+        padding: 15px;
+    }
+
+    .playoff-team-name {
+        font-size: 15px;
+    }
+
+    #playoff-bracket > div {
+        padding: 18px;
+    }
+
+}
+
+/* ==========================================
+   PLAYOFF PAGE CLEANUP
+========================================== */
+
+#playoff-probabilities {
+    width: 100%;
+}
+
+#playoff-probabilities > h2 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* CURRENT PLAYOFF FIELD */
+
+.current-playoff-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 45px;
+}
+
+.playoff-field-team {
+    display: grid;
+    grid-template-columns: 55px minmax(0, 1fr) 180px 90px;
+    align-items: center;
+    gap: 15px;
+    padding: 16px 20px;
+    background: #111111;
+    border: 1px solid #242424;
+    border-radius: 8px;
+    min-height: 58px;
+    box-sizing: border-box;
+}
+
+.playoff-field-team.playoff-team {
+    border-left: 4px solid #d4af37;
+}
+
+.playoff-field-team.outside-playoff {
+    opacity: 0.65;
+    border-left: 4px solid #444444;
+}
+
+.playoff-field-team .seed {
+    font-size: 14px;
+    font-weight: 700;
+    color: #d4af37;
+}
+
+.playoff-field-team .team-name {
+    font-size: 17px;
+    font-weight: 700;
+    color: #ffffff;
+    min-width: 0;
+}
+
+.playoff-field-team .manager {
+    color: #888888;
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.playoff-field-team .playoff-status {
+    justify-self: end;
+    padding: 5px 9px;
+    border-radius: 4px;
+    background: #d4af37;
+    color: #050505;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.playoff-field-team.outside-playoff .playoff-status {
+    background: #333333;
+    color: #999999;
+}
+
+/* PLAYOFF ODDS */
+
+.playoff-odds-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 45px;
+    background: #111111;
+    border: 1px solid #242424;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.playoff-odds-row {
+    display: grid;
+    grid-template-columns: 55px minmax(0, 1fr) 100px 120px 140px;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    margin: 0;
+    background: #111111;
+    border-bottom: 1px solid #242424;
+    box-sizing: border-box;
+}
+
+.playoff-odds-row:last-child {
+    border-bottom: none;
+}
+
+.playoff-odds-row:first-child {
+    background: #d4af37;
+    color: #050505;
+}
+
+.playoff-odds-row:first-child p {
+    color: #050505;
+}
+
+.playoff-rank {
+    margin: 0;
+    font-weight: 800;
+    color: #d4af37;
+}
+
+.playoff-odds-team {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.playoff-record {
+    margin: 0;
+    font-size: 14px;
+    color: #aaaaaa;
+}
+
+.playoff-percentage {
+    margin: 0;
+    text-align: right;
+    font-size: 15px;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.playoff-odds-row:first-child .playoff-percentage {
+    color: #050505;
+}
+
+/* PLAYOFF BRACKET */
+
+#playoff-bracket {
+    width: 100%;
+}
+
+#playoff-bracket > .playoff-bracket {
+    width: 100%;
+}
+
+.bracket-round {
+    background: #111111;
+    border: 1px solid #242424;
+    border-radius: 8px;
+    padding: 25px;
+}
+
+.bracket-round h3 {
+    margin: 0 0 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #2b2b2b;
+    color: #d4af37;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.bracket-game {
+    display: grid;
+    grid-template-columns: 55px minmax(0, 1fr) 55px minmax(0, 1fr);
+    align-items: center;
+    gap: 12px;
+    padding: 16px 18px;
+    margin-bottom: 10px;
+    background: #181818;
+    border: 1px solid #292929;
+    border-radius: 6px;
+}
+
+.bracket-game .seed {
+    color: #d4af37;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.bracket-game strong {
+    text-align: center;
+    color: #777777;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.bracket-game span:last-child {
+    text-align: right;
+}
+
+.bracket-game > span:not(.seed),
+.bracket-game > strong {
+    min-width: 0;
+}
+
+.bracket-bye {
+    margin-top: 18px;
+    padding: 15px 18px;
+    border: 1px solid #d4af37;
+    border-radius: 6px;
+    background: rgba(212, 175, 55, 0.08);
+    color: #d4af37;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .playoff-field-team {
+        grid-template-columns: 40px minmax(0, 1fr) auto;
+        gap: 10px;
+        padding: 13px 14px;
+    }
+
+    .playoff-field-team .manager {
+        grid-column: 2;
+        font-size: 12px;
+    }
+
+    .playoff-field-team .playoff-status {
+        grid-column: 3;
+        grid-row: 1 / span 2;
+    }
+
+    .playoff-field-team .team-name {
+        font-size: 15px;
+    }
+
+    .playoff-odds-row {
+        grid-template-columns: 40px minmax(0, 1fr) 70px 75px;
+        gap: 8px;
+        padding: 13px 12px;
+    }
+
+    .playoff-odds-row .playoff-record {
+        display: none;
+    }
+
+    .playoff-percentage {
+        font-size: 13px;
+    }
+
+    .bracket-round {
+        padding: 15px;
+    }
+
+    .bracket-game {
+        grid-template-columns: 40px minmax(0, 1fr) 35px;
+        gap: 8px;
+    }
+
+    .bracket-game strong {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    .bracket-game span:last-child {
+        grid-column: 2;
+        grid-row: 2;
+        text-align: left;
+        padding-top: 5px;
+    }
+
+}
+
+/* ==========================================
+   PLAYOFF ODDS - STANDINGS STYLE
+========================================== */
+
+.playoff-odds-grid {
+    display: flex;
+    flex-direction: column;
+    background: #111111;
+    border: 1px solid #292929;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 45px;
+}
+
+.playoff-odds-card {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+    padding: 17px 22px;
+    background: #111111;
+    border-bottom: 1px solid #292929;
+}
+
+.playoff-odds-card:last-child {
+    border-bottom: none;
+}
+
+.playoff-odds-card:hover {
+    background: #161616;
+}
+
+.playoff-odds-team {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.playoff-odds-manager {
+    color: #777777;
+    font-size: 13px;
+}
+
+.playoff-odds-card .playoff-odds-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    border: none;
+}
+
+.playoff-odds-card .playoff-odds-row span {
+    color: #777777;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.playoff-odds-card .playoff-odds-row strong {
+    color: #d4af37;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+/* Header labels */
+
+.playoff-odds-grid::before {
+    content: "TEAM                                      RECORD                    PLAYOFF %              CHAMPIONSHIP %";
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    padding: 13px 22px;
+    background: #0a0a0a;
+    color: #777777;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    white-space: pre;
+    border-bottom: 1px solid #292929;
+}
+
+@media (max-width: 700px) {
+
+    .playoff-odds-grid::before {
+        content: "TEAM                         RECORD              PLAYOFF %              CHAMP %";
+        font-size: 9px;
+        padding: 12px;
+    }
+
+    .playoff-odds-card {
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        gap: 8px;
+        padding: 15px 12px;
+    }
+
+    .playoff-odds-team {
+        font-size: 14px;
+    }
+
+    .playoff-odds-manager {
+        font-size: 11px;
+    }
+
+    .playoff-odds-card .playoff-odds-row span {
+        display: none;
+    }
+
+    .playoff-odds-card .playoff-odds-row strong {
+        font-size: 15px;
+    }
+
+}
+
+/* ==================================================
+   HISTORY PAGE
+================================================== */
+
+/*
+   IMPORTANT:
+   The History page uses:
+   #history-table
+      .history-header
+      .history-row
+
+   Each header/row contains 8 <p> elements.
+*/
+
+#history-table {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    background: #111111;
+    border: 1px solid #292929;
+    border-radius: 8px;
+    display: block;
+}
+
+/* TABLE HEADER + ROWS */
+
+#history-table .history-header,
+#history-table .history-row {
+    display: grid !important;
+
+    grid-template-columns:
+        minmax(190px, 2.2fr)
+        minmax(120px, 1.2fr)
+        minmax(85px, 0.8fr)
+        minmax(125px, 1.2fr)
+        minmax(110px, 1.1fr)
+        minmax(110px, 1fr)
+        minmax(100px, 0.9fr)
+        minmax(110px, 1fr);
+
+    width: 100%;
+    min-width: 1050px;
+
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+/* HEADER */
+
+#history-table .history-header {
+    min-height: 55px;
+    background: #d4af37;
+    border-bottom: 1px solid #292929;
+}
+
+/* ROW */
+
+#history-table .history-row {
+    min-height: 62px;
+    background: #111111;
+    border-top: 1px solid #292929;
+}
+
+#history-table .history-row:hover {
+    background: #181818;
+}
+
+/* ALL CELLS */
+
+#history-table .history-header p,
+#history-table .history-row p {
+    display: block;
+
+    width: 100%;
+    min-width: 0;
+
+    margin: 0 !important;
+    padding: 0 12px !important;
+
+    box-sizing: border-box;
+
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+/* HEADER TEXT */
+
+#history-table .history-header p {
+    color: #050505;
+    font-size: 11px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    text-align: center;
+}
+
+/* NAME */
+
+#history-table .history-header p:first-child,
+#history-table .history-row p:first-child {
+    text-align: left;
+}
+
+#history-table .history-name {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 800;
+    text-align: left;
+    white-space: nowrap;
+}
+
+/* RECORD */
+
+#history-table .history-record {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 800;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* PERCENTAGES */
+
+#history-table .history-percentage {
+    color: #d4af37;
+    font-size: 14px;
+    font-weight: 800;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* CHAMPIONSHIPS */
+
+#history-table .history-championships {
+    color: #d4af37;
+    font-size: 18px;
+    font-weight: 900;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* RUNNER UP */
+
+#history-table .history-runner-up {
+    color: #bbbbbb;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* HIGH POINTS */
+
+#history-table .history-high-score {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* HISTORY MOBILE */
+
+@media (max-width: 1100px) {
+
+    #history-table {
+        overflow-x: auto;
+    }
+
+    #history-table .history-header,
+    #history-table .history-row {
+        min-width: 1050px;
+    }
+
+}
+/* =========================================
+   FINAL STANDINGS TABLE
+========================================= */
+
+.standings-table {
+    width: 100%;
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.standings-header,
+.standings-row {
+    display: grid;
+    grid-template-columns: 60px minmax(180px, 2fr) minmax(140px, 1.5fr) 90px 100px 100px 100px;
+    align-items: center;
+    column-gap: 0;
+}
+
+.standings-header {
+    background: #1d1d1d;
+    color: #d4af37;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    min-height: 50px;
+    border-bottom: 2px solid #d4af37;
+}
+
+.standings-header div,
+.standings-row div {
+    padding: 15px 14px;
+}
+
+.standings-row {
+    min-height: 62px;
+    color: #fff;
+    background: #111;
+    border-bottom: 1px solid #292929;
+    font-size: 14px;
+}
+
+.standings-row:last-child {
+    border-bottom: none;
+}
+
+.standings-row:nth-child(even) {
+    background: #151515;
+}
+
+.standings-rank {
+    color: #d4af37;
+    font-weight: 800;
+    text-align: center;
+}
+
+.standings-team {
+    font-weight: 800;
+    color: #fff;
+}
+
+.standings-manager {
+    color: #aaa;
+}
+
+.standings-record {
+    font-weight: 800;
+    text-align: center;
+}
+
+.standings-points,
+.standings-points-against {
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+}
+
+.playoff-team {
+    border-left: 3px solid #d4af37;
+}
+
+.playoff-cutoff {
+    border-bottom: 3px solid #d4af37;
+}
+
+@media (max-width: 800px) {
+
+    .standings-table {
+        overflow-x: auto;
+    }
+
+    .standings-header,
+    .standings-row {
+        min-width: 700px;
+    }
+    .standings-streak {
+    text-align: center;
+    font-weight: 800;
+    color: #fff;
+}
+}
+
+
+/* =========================================
+   FINAL MATCHUP CARDS
+========================================= */
+
+.matchup-card {
+    width: 100%;
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 22px;
+}
+
+.matchup-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 22px;
+    background: #1a1a1a;
+    border-bottom: 1px solid #333;
+}
+
+.matchup-label {
+    color: #d4af37;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.matchup-card-header h3 {
+    margin: 4px 0 0;
+    color: #fff;
+    font-size: 20px;
+}
+
+.matchup-series {
+    text-align: right;
+    color: #888;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.matchup-series strong {
+    display: block;
+    margin-top: 5px;
+    color: #d4af37;
+    font-size: 13px;
+    letter-spacing: 0;
+}
+
+.matchup-teams {
+    display: grid;
+    grid-template-columns: 1fr 70px 1fr;
+    align-items: center;
+    gap: 15px;
+    padding: 28px 22px;
+}
+
+.matchup-team {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.matchup-team-left {
+    text-align: left;
+}
+
+.matchup-team-right {
+    text-align: right;
+    align-items: flex-end;
+}
+
+.matchup-team strong {
+    color: #fff;
+    font-size: 19px;
+}
+
+.matchup-team small {
+    color: #888;
+    font-size: 12px;
+}
+
+.actual-score {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 900;
+    margin-top: 8px;
+}
+
+.projected-score {
+    color: #d4af37;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.matchup-vs {
+    color: #777;
+    font-size: 13px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.projection-bar {
+    display: flex;
+    width: calc(100% - 44px);
+    height: 9px;
+    margin: 0 22px 22px;
+    background: #222;
+    border-radius: 99px;
+    overflow: hidden;
+}
+
+.projection-fill-one {
+    background: #d4af37;
+    height: 100%;
+}
+
+.projection-fill-two {
+    background: #555;
+    height: 100%;
+}
+
+.empty-state {
+    padding: 40px;
+    text-align: center;
+    color: #888;
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 12px;
+}
+
+@media (max-width: 700px) {
+
+    .matchup-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .matchup-series {
+        text-align: left;
+    }
+
+    .matchup-teams {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .matchup-team-left,
+    .matchup-team-right {
+        text-align: center;
+        align-items: center;
+    }
+
+    .matchup-vs {
+        padding: 5px;
+    }
+
+}
+/* =========================================
+   FINAL STANDINGS OVERRIDE
+========================================= */
+
+#standings {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #111111;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+    gap: 0;
+}
+
+#standings .standings-header,
+#standings .standings-row {
+    display: grid !important;
+    grid-template-columns:
+        60px
+        minmax(180px, 2fr)
+        minmax(140px, 1.5fr)
+        100px
+        120px
+        100px
+        100px;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#standings .standings-header {
+    min-height: 50px;
+    background: #d4af37 !important;
+    color: #050505;
+    border-bottom: 2px solid #000000;
+}
+
+#standings .standings-header div {
+    padding: 15px 14px;
+    color: #050505;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#standings .standings-row {
+    min-height: 62px;
+    background: #111111;
+    color: #ffffff;
+    border-bottom: 1px solid #292929;
+}
+
+#standings .standings-row:nth-child(odd) {
+    background: #151515;
+}
+
+#standings .standings-row:last-child {
+    border-bottom: none;
+}
+
+#standings .standings-row:hover {
+    background: #1c1c1c;
+}
+
+#standings .standings-row div {
+    padding: 15px 14px;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+#standings .standings-rank {
+    color: #d4af37;
+    font-size: 16px;
+    font-weight: 900;
+    text-align: center;
+}
+
+#standings .standings-team {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 800;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#standings .standings-manager {
+    color: #999999;
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#standings .standings-record {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 800;
+    text-align: center;
+}
+
+#standings .standings-streak {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 800;
+    text-align: center;
+}
+
+#standings .standings-points,
+#standings .standings-points-against {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+}
+
+/* EVERY TEAM IS IDENTICAL */
+
+#standings .standings-row {
+    border-left: none !important;
+    box-shadow: none !important;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    #standings {
+        overflow-x: auto;
+    }
+
+    #standings .standings-header,
+    #standings .standings-row {
+        min-width: 900px;
+    }
+
+}
