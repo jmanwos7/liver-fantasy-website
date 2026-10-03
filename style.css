@@ -1862,7 +1862,7 @@ h2 {
     overflow-x: auto;
     overflow-y: hidden;
     background: #111111;
-    border: 1px solid #292929;
+    border: 2px solid #333333;
     border-radius: 8px;
     display: block;
 }
@@ -1927,6 +1927,7 @@ h2 {
     padding: 0 12px !important;
 
     box-sizing: border-box;
+    border-right: 2px solid #333333
 
     line-height: 1.2;
     white-space: nowrap;
