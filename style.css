@@ -1901,14 +1901,14 @@ h2 {
     background: #d4af37;
     border-bottom: 1px solid #292929;
 }
-
 /* ROW */
 
 #history-table .history-row {
     min-height: 62px;
     background: #111111;
-    border-top: 1px solid #292929;
+    border-top: 2px solid #333333;
 }
+
 
 #history-table .history-row:hover {
     background: #181818;
